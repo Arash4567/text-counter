@@ -26,4 +26,4 @@ RUN mkdir static
 #   python manage.py migrate
 # RUN python manage.py collectstatic --no-input
 EXPOSE 8000
-CMD gunicorn -b :8000 todoApp.wsgi:application
+CMD gunicorn -b :8000 text-counter.wsgi:application
