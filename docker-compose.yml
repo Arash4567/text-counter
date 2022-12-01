@@ -1,0 +1,22 @@
+version: '3.9'
+ 
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - "./static:/staticfiles"
+    restart: always
+    ports:
+      - "8000:8000"
+  nginx:
+    container_name: nginx
+    build:
+      context: nginx/
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    # volumes:
+    #   - "./static:/staticfiles"
+ 
